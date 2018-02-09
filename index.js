@@ -17,7 +17,7 @@ this.GdaxWebsocket = new gdax.WebsocketClient(
 	websocketUrl,
 	null,
 	['full']
-	);
+);
 this.GdaxWebsocket.on('message', data => {
 	if(data.product_id === 'BTC-USD'){
 		console.log(chalk.yellow(JSON.stringify(data)));
@@ -34,6 +34,6 @@ this.GdaxWebsocket.on('message', data => {
 	} else if (data.product_id === 'ETH-BTC'){
 		console.log(chalk.blueBright(JSON.stringify(data)))
 	} else {
-		console.log(chalk.gray(JSON.stringify(data));
+		console.log(chalk.gray(JSON.stringify(data)));
 	};
 });
